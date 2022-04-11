@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>add new product</h1>
+            <input type="text" id="input">
+            <button onclick="click()">add</button>
+            <h1>display product</h1>
+        </div>
+        <div>
+            <b>product name</b>
+            <b id="sl"></b>
+        </div>
+        <div id="list">
+
+        </div>
+    </div>
+
+    <script>
+        let input = document.getElementById("input");
+        let soLuong = document.getElementById("sl");
+        let list = document.getElementById("list");
+        let product = ['iphone 5', 'samsung galaxy', 'oppo', 'redmi', 'hawai'];
+       
+        add();
+        function click(){
+            let inputSP = input.value;
+            console.log(inputSP);
+            product.push([inputSP]);
+            console.log(product)
+            add();
+        }
+        function add() {
+            soLuong.innerHTML = product.length + "product"; 
+            let str = '';
+            for (let i = 0; i < product.length; i++) {
+                str += product[i] + "<br>";
+            }
+            list.innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

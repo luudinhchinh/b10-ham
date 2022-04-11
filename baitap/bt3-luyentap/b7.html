@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function min(a,b,c){
+            let min=a;
+            if(a<b && a<c){
+                return min=a;
+            }else if(b<a && b<c){
+                return min=b;
+            }else if(c<a && c<b){
+                return min = c;
+            }
+        }
+        let i = parseInt(prompt("nhập vào một số:"));
+        let j = parseInt(prompt("nhập vào một số:"));
+        let k = parseInt(prompt("nhập vào một số:"));
+        document.write("min là: " + min(i,j,k));
+    </script>
+</body>
+</html>

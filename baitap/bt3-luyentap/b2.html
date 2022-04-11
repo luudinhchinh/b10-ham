@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let ten = prompt("nhập vào tên:")
+        function find(name) {
+            let name1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            let name2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+            for (let i = 0; i <= name1.length; i++) {
+                if (name == name1[i]) {
+                    name1[i] == name2[i];
+                    return name2[i];
+                }
+            }
+            return ("không có trong mảng sao này")
+        }
+        document.write( "kết quả là: " + find(ten));
+
+        // cách 2
+        let name1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let name2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let ip = prompt("nhập vào");
+        function check(ip){
+            if(name1.indexOf(ip)==-1){
+                return ("không tìm thấy")
+            }else {
+                return name2[name1.indexOf(ip)];
+            }
+        }
+        alert(check(ip));
+
+    </script>
+</body>
+
+</html>

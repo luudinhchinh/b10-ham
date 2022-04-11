@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = [5,3,7,-1,9];
+        let array2 = [3,5,1,2,8];
+        let array3 = [];
+        let array4 = [0,0,0,0,0];
+        function find(arrayi){
+            let min = arrayi[0];
+            for(let i=0;i<arrayi.length;i++){
+                if(arrayi[i]<min){
+                   min =arrayi[i];
+                }
+               
+            }
+            return min;
+        }
+        document.write(find(array1));
+        document.write(find(array2));
+        document.write(find(array3));
+        document.write(find(array4));
+    </script>
+</body>
+</html>

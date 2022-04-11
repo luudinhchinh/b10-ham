@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function gt(n){
+            let k=1;
+            for(let i=1;i<=n;i++){
+                k = k*i;
+            }
+            return k;
+        }
+        //c2
+        // function giaiThua(n){
+        //     if(n==1){  //Nếu n == 1 thì ta trả về giá trị 1.
+        //         return 1;
+        //     }else { //Nếu không phải thì ta dùng công thức truy hồi để tính (n-1)!
+        //         return n*giaiThua(n-1);
+        //     }
+        // }
+        let a = parseInt(prompt("nhập vào một số:"));
+        document.write("giai thừa là: " + gt(a));
+
+
+    </script>
+</body>
+</html>

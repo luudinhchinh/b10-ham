@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>chuyển đổi</h1>
+        <input type="number" id="num">
+        <select name="" id="chuyen">
+            <option value="foot">foottometer</option>
+            <option value="meter">metertofoot</option>
+        </select>
+        <br>
+        <span id="result"></span>
+    </div>
+    <script>
+        let num = document.getElementById("num");
+        let convert = document.getElementById("chuyen");
+        let result = document.getElementById("result");
+        convert.addEventListener("click", function(){
+            switch(convert.value){
+                case "foot": result.innerText = "foot: " + footToMeter(num.value);
+                case "meter": result.innerText = "meter: " + meterToFoot(num.value);
+            }
+            
+        })
+        function footToMeter(foot){
+            return 0.305*foot;
+        }
+        function meterToFoot(meter){
+            return 3.279*meter
+        }
+       
+        
+    </script>
+</body>
+</html>

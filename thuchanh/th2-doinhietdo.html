@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>chuyển đổi nhiệt độ</h1>
+        <b>type a value fahrenheit </b> <br>
+        <span>fahrenheit</span>
+        <input type="number" id="input" oninput="text(this.value)" onchange="text(this.value)">
+        <br>
+        celcius:<span id="result"></span>
+    </div>
+    <script>
+        let result = document.getElementById("result");
+        function text(obj){
+             obj = parseFloat(obj);
+            result.innerText=(obj-32)/1.8;
+            
+        }
+        
+        
+        
+    </script>
+</body>
+</html>
