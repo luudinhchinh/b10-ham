@@ -36,7 +36,7 @@
         <div>
             <h1>add new product</h1>
             <input type="text" id="input">
-            <button onclick="click()" class="btn btn-primary">add</button>
+            <button onclick="addValue()" class="btn btn-primary">add</button>
             <h1>display product</h1>
         </div>
         <div>
@@ -50,21 +50,21 @@
         let list = document.getElementById("list");
         let product = ['iphone 5', 'samsung galaxy', 'oppo', 'redmi', 'hawai'];
 
-        add();
+        display();
 
-        function click() { // hàm thêm
+        function addValue() { // hàm thêm
             let inp = input.value;
             product.push(inp);
             console.log(product);
-            add();
+            display();
         }
         function del(index) { // hàm xóa
             product.splice(index, 1);
-            add();
+            display();
         }
         function edit(index) { //hàm sửa
             let st = '';
-            st = " <input type='text' id='editInput'>" + product[index] +
+            st =  product[index] + "-->" + " <input type='text' id='editInput'>" + 
                 "<button onclick='editSave(" + index + ")'> save </button>";
             document.getElementById('list').innerHTML = st;
         }
@@ -72,9 +72,9 @@
 
             product[index] = document.getElementById('editInput').value;
             document.getElementById('list').innerHTML = '';
-            add();
+            display();
         }
-        function add() { // hàm hiển thị
+        function display() { // hàm hiển thị
             let str = ' <tr> ' +
                 '<td><b>product</b></td>' +
                 '<td></td> ' +
